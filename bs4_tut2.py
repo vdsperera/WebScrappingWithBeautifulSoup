@@ -5,7 +5,11 @@ source = urllib.request.urlopen('https://pythonprogramming.net/parsememcparsefac
 soup = bs.BeautifulSoup(source, 'lxml')
 
 nav = soup.nav
-for url in nav.find_all('a'):
-    print(url.get('href'))
+# for url in nav.find_all('a'):
+#     print(url.get('href'))
+
+body = soup.body
+for paragraph in body.find_all('p'):
+    print(paragraph.text)
 
 
