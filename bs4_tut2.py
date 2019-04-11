@@ -12,7 +12,10 @@ nav = soup.nav
 # for paragraph in body.find_all('p'):
 #     print(paragraph.text)
 
-for div in soup.find_all('div'):
+# for div in soup.find_all('div'):
+#     print(div.text)
+
+for div in soup.find_all('div', class_ = 'body'):
     print(div.text)
 
 
